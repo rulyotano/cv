@@ -1,66 +1,51 @@
-\documentclass[letter,10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{tabularx}
-\usepackage{array}
 
-%====================
-% File:         resume.tex
-% Modifying author2:       https://github.com/mengisok 
-% Last Updated: Oct 29, 2022
-% Notes:        I edited again on the version of @gobborg      
-%====================
+\documentclass[letterpaper,11pt]{article}
 
-%====================
-% File:         resume.tex
-% Modifying author1:       https://github.com/gobborg 
-% Last Updated: Dec 26, 2021
-% Notes:        I just made it prettier and better suited to
-%               my needs.
-%====================
+% Choose bibliography style for formatting list of publications
+\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+\bibliography{papers}
 
-%====================
-% File:         resume.tex
-% Original author:       https://github.com/TimmyChan 
-%               https://www.linkedin.com/in/timmy-l-chan/
-% Last Updated: Nov 19, 2021
-% Notes:        All formatting is done in TLCresume.sty
-%               No need to touch that file. 
-%               All actual content is in the sections/ folder.
-%====================
+% Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
+\def\theme{MidnightBlue}
 
-\usepackage{TLCresume}
+% More predefined colors can be found in 
+% https://en.wikibooks.org/wiki/LaTeX/Colors
 
-%====================
-% CONTACT INFORMATION
-%====================
-\author{Raul Otaño Hurtado} 
-\def\phone{Phone number}
-\def\city{City}
-\def\email{Email}
-% blog edited in _header.tex
-\def\github{github} % github username
-\def\LinkedIn{linkedin} % linkedin.com/in/______
+\usepackage{simplecv}
+
+\boldname{Cetin}{Doruk}{D.}
 
 \begin{document}
-\import{sections/}{_header}
-\vspace*{10pt}
 
-\section{Education}
-\import{sections/}{education}
-\vspace*{10pt}
+% Heading
+\headinginline{Doruk Çetin}{
+    Website: \website{dcetin.me} \\ 
+    Email: \email{dcetin@ethz.ch} \\
+    % LinkedIn: \linkedin{doruk-cetin} \\
+    GitHub: \github{dcetin}
+}
 
-\section{Work Experience}
-\import{sections/}{experience}
-\vspace*{10pt}
+% \headingphoto{Doruk Çetin}{
+%     Website: \website{dcetin.me} \\ 
+%     Email: \email{dcetin@ethz.ch} \\
+%     % LinkedIn: \linkedin{doruk-cetin} \\
+%     GitHub: \github{dcetin}
+% }{photo.png}
 
-\section{Project}
-\vspace*{3pt}
-\import{sections/}{project}
-\vspace*{10pt}
+% Page One
+\import{sections/}{education.tex}
+\import{sections/}{experience.tex}
+\import{sections/}{publications.tex}
 
-\section{Skills}
-\vspace*{3pt}
-\import{sections/}{skills}
-\vspace*{10pt}
+\pagebreak
+
+% Page Two
+\import{sections/}{teaching.tex}
+\sidebyside
+    {\import{sections/}{skills.tex}}
+    {\import{sections/}{languages.tex}}
+\import{sections/}{projects.tex}
+\import{sections/}{awards.tex}
+\import{sections/}{volunteering.tex}
 
 \end{document}
