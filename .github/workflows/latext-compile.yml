@@ -25,10 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Install texlive
-        run: sudo apt install texlive-base 
-      - name: Install texlive-latex-extra
-        run: sudo apt-get install texlive-latex-extra
+      - name: Install texlive 
+      - name: Install texlive-latex-full
+        run: sudo apt-get install texlive-full
       - name: Build pdf
         run: xelatex cv.tex -o cv-raul-otaño-hurtado.pdf
       - name: Create pull request
