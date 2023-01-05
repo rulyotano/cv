@@ -25,12 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Install texlive
+        run: sudo apt install texlive-base 
+      - name: Install texlive-latex-extra
+        run: sudo apt-get install texlive-latex-extra
+      - name: Build pdf
+        run: pdflatex cv.tex -o cv-raul-otaño-hurtado.pdf
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with: 
+          commit-message: pdflatex build
+          branch: pdflatex_build
+          title: '[CI] pdflatex build'
