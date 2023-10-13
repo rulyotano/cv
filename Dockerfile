@@ -10,4 +10,6 @@ RUN apt-get update && apt-get install -y debconf-utils && \
 FROM base as build
 COPY ./.docker/entrypoint.sh /entrypoint.sh
 VOLUME [ "/var/build" ]
+ENV EMAIL=fake@email.com
+ENV PHONE=00-00-0000
 ENTRYPOINT [ "bash", "/entrypoint.sh" ]
