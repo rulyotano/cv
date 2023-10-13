@@ -137,17 +137,25 @@
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
-\usepackage{color}
-\usepackage{hyperref}
-
 %accent color
 \definecolor{sectcol}{RGB}{252,173,98}
+
+\definecolor{sectcoldark}{RGB}{125, 62, 3}
 
 %dark background color
 \definecolor{bgcol}{RGB}{110,110,110}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
+
+% Links
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=sectcoldark
+    }
+
 
 
 %============================================================================%
@@ -323,7 +331,7 @@
 %	META SECTION
 %----------------------------------------------------------------------------------------
 \metasection{Madrid, Spain}{\textbf{Status:} B.Sc. Computer Science}
-\metasection{rulyotano.com}{\textbf{Fields:} Software Engineering} 
+\metasection{\href{https://rulyotano.com}{rulyotano.com}}{\textbf{Fields:} Software Engineering} 
 \metasection{<<email1>>}{\textbf{Languages:} English (Professional), Spanish (Native), Portuguese (Professional)}
 \metasection{<<phone1>>}{\textbf{Activities:} Swimming, Running, Open Source, Fitness, Babysitting}
 \vspace{-2pt}
@@ -389,38 +397,20 @@ Let's collaborate and build amazing software together!\\
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-\cvevent{2008 - 2013}{Graduated as B.Sc. Computer Science}{Havana University}{
+\cvevent{2008 - 2013}{Graduated as B.Sc. Computer Science}{\href{https://matcom.uh.cu}{Havana University}}{
 	{Graduated with a great background of Computer Science.},
 	{Learned very basic things like math, logic and algebra.},
 	{But also Computer Since related subjects like programming, compilers, AI, databases, networking, optimizations and a lot more. }
 }
 
-\cvevent{2020 - present}{Licenses and Certifications}{WWW}{
-	{Docker Mastery: with Kubernetes +Swarm from a Docker Captain (Udemy)},
-	{Software Architecture Foundations (LinkedIn)},
-	{Software Architecture: Domain-Driven Design (LinkedIn)},
-	{Microservices Architecture and Implementation on .NET 5 Course (Udemy)},
-	{Problem Solving (Intermediate) Certificate (HackerRank)}
+\cvevent{2020 - present}{Licenses and Certifications}{}{
+	{Docker Mastery: with Kubernetes +Swarm from a Docker Captain (\href{https://ude.my/UC-1cd13819-15b9-497f-b64a-bdcf46a5486b}{Udemy})},
+	{Software Architecture Foundations (\href{https://www.linkedin.com/learning/certificates/bd4c1327e9f788cc7965dcded5641e21e2fbc9855374203a2f84ad7bb7910fab}{LinkedIn})},
+	{Software Architecture: Domain-Driven Design (\href{https://www.linkedin.com/learning/certificates/e337a7bc24c5ab4bb34600bed69510b387601cc8c75df9f43c73bde385a4ef67}{LinkedIn})},
+	{Microservices Architecture and Implementation on .NET 5 Course (\href{https://ude.my/UC-1a9390d9-ffee-4789-9c27-6bdbb35fa1f5}{Udemy})},
+	{Problem Solving (Intermediate) Certificate (\href{https://www.hackerrank.com/certificates/5b4c0d75cbc9}{HackerRank})}
 }
 
-%---------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%--------------------------------------------------------------------------------------
-\cvsection{Education}
-
-\cvevent{2008 - 2013}{Graduated as B.Sc. Computer Science}{Havana University}{
-	{Graduated with a great background of Computer Science.},
-	{Learned very basic things like math, logic and algebra.},
-	{But also Computer Since related subjects like programming, compilers, AI, databases, networking, optimizations and a lot more. }
-}
-
-\cvevent{2020 - present}{Licenses and Certifications}{WWW}{
-	{Docker Mastery: with Kubernetes +Swarm from a Docker Captain (Udemy)},
-	{Software Architecture Foundations (LinkedIn)},
-	{Software Architecture: Domain-Driven Design (LinkedIn)},
-	{Microservices Architecture and Implementation on .NET 5 Course (Udemy)},
-	{Problem Solving (Intermediate) Certificate (HackerRank)}
-}
 
 %---------------------------------------------------------------------------------------
 %	OPEN SOURCE SECTION
