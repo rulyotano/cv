@@ -8,5 +8,8 @@ compile:
 	$(eval templateFileName := Raul-Otano.en)
 	$(buildpdf)
 
+clean:
+	docker container rm -f cv
+
 build:
 	docker build -t cv --target build .
