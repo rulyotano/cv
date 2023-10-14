@@ -1,0 +1,45 @@
+name: Build & Push Image
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - .docker/entrypoint.sh
+      - Dockerfile
+
+jobs:
+  build-push-image:
+    name: Build and push image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Docker Metadata for Image Build
+        id: docker_meta
+        uses: docker/metadata-action@v4
+        with:
+          images: rulyotano/latex-builder
+          flavor: |
+            latest=true
+          tags: |
+            type=ref,event=pr
+            type=ref,event=branch
+            type=raw,value=${{ github.run_id }}
+      - name: Docker build and Push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: ${{ steps.docker_meta.outputs.tags }}
+          labels: ${{ steps.docker_meta.outputs.labels }}
+          target: build
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          context: ./
+          platforms: linux/amd64
