@@ -13,3 +13,4 @@ Also I need to give the credits to [Ale Dominguez](https://github.com/adborroto)
 3. Behind this, there is a newly created docker image that I'e named `rulyotano/latex-builder`. If the change something in the or the entry point this image is going to be updated. Check the `.docker/entrypoint.sh` file, because in here you will be able to add your custom mappings to private fields. In my case, so far, only email and phone. Note: you don't need to use the image I've created, you can build the image during the pdf creation action, and no need to push it to any docker registry.
 4. To create the pdf file, I've created a manually triggered action for that. To run this one you will need to pickup the template you want build (need to add it to the action definition file). Then the image is used to create build the pdf and then it is pushed it to a private github repository, in order to keep our privacy.
 
+![CV](images/cv.png)
