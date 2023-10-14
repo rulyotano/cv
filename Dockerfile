@@ -1,7 +1,7 @@
 FROM ubuntu:18.04 AS base
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install textlive
+# Setup textlive
 RUN apt-get update && apt-get install -y debconf-utils && \
     apt-get install texlive-base -y && \
     echo "US" | debconf-get-selections && \
