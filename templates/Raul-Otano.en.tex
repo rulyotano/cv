@@ -81,11 +81,17 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=20mm, bottom=20mm, left=1.5cm, right=1.5cm} 	
 
 %use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
+\fancyhf{}
+
+%use our custom fancy header definitions
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 %less space between header and content
 \setlength{\headheight}{-5pt}		
@@ -170,14 +176,8 @@
 % 	HEADER
 %----------------------------------------------------------------------------------------
 
-% remove top header line
-\renewcommand{\headrulewidth}{0pt} 
-
-%remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
-
 %remove pagenum
-\renewcommand{\thepage}{}	
+% \renewcommand{\thepage}{}	
 
 %remove section num		
 \renewcommand{\thesection}{}			
@@ -277,12 +277,6 @@
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
-%----------------------------------------------------------------------------------------
-% CUSTOM LOREM IPSUM
-%----------------------------------------------------------------------------------------
-\newcommand{\lorem}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
-
 %============================================================================%
 %
 %
@@ -293,12 +287,6 @@
 %
 %============================================================================%
 \begin{document}
-
-
-%use our custom fancy header definitions
-\pagestyle{fancy}	
-
-
 
 
 
@@ -334,6 +322,7 @@
 \metasection{\href{https://rulyotano.com}{rulyotano.com}}{\textbf{Fields:} Software Engineering} 
 \metasection{<<email1>>}{\textbf{Languages:} English (Professional), Spanish (Native), Portuguese (Professional)}
 \metasection{<<phone1>>}{\textbf{Activities:} Swimming, Running, Open Source, Fitness, Babysitting}
+\metasection{}{\textbf{Social:} \href{https://github.com/rulyotano}{Github}, \href{https://www.linkedin.com/in/raulotanohurtado}{Linkedin}, \href{https://stackoverflow.com/users/1655482}{Stackoverflow}, \href{https://www.hackerrank.com/rulyotano}{Hackerrank}, \href{https://medium.com/@rulyotano}{Medium}}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -363,28 +352,28 @@ Let's collaborate and build amazing software together!\\
 %----------------------------------------------------------------------------------------
 \cvsection{Experience}
 
-\cvevent{March 2021 - present}{Backed Software Engineer (.NET)}{Docplanner (docplanner.com)}{
+\cvevent{March 2021 - present}{Backed Software Engineer (.NET)}{Docplanner (\href{https://www.docplanner.com/about-us}{docplanner.com})}{
 	{Worked as part of my team Umbrella. DP has two main parts: one is the marketplace where patients search doctors, and the other one is where the doctors manage their patients, patients’ episodes, and appointments. I've worked mainly in the doctor side, specifically with the management of patients, episodes and other things. I've faced many challenges like optimizing the existing code to improve the throughput and get the latency down, created new micro-services from scratch, and also learned a bunch of new things that I didn't know before.}
 }
 
-\cvevent{July 2020 - March 2021}{Senior Software Engineer for Openbank}{Mimacom Iberica (mimacom.com)}{
+\cvevent{July 2020 - March 2021}{Senior Software Engineer for Openbank}{Mimacom Iberica (\href{https://mimacom.com/es}{mimacom.com})}{
 	{Worked as a Senior Software Developer for one of the company’s clients: Openbank. Worked as a frontend ReactJs engineer. The main challenge was to create a new on-boarding app, it should be done by following all the best practices standards and also using the Openbank tech. A part of the app needed to work embed into the mobile app, so that was also a challenge. Also, conducted many job interviews to new candidates that wanted to join the company.}
 }
 
-\cvevent{March 2018 - June 2020}{Fullstack Software Engineer}{Consolfreight (consolfreight.com)}{
+\cvevent{March 2018 - June 2020}{Fullstack Software Engineer}{Consolfreight (\href{https://consolfreight.com/}{consolfreight.com})}{
 	{Worked as full-stack engineer to be able to finish and release the ConsolFreight web application. The main goal of this systems was to sell cargo routes to people and companies that wanted to send cargo. The harder part was translating the requirements (that are a mess in the industry) into a domain definition that would work to create the app. Using mostly Aspnet MVC, MVC Core, ReactJs/Redux technologies, also worked at CI/CD with azure pipelines.}
 }
 
-\cvevent{September 2016 - 2018}{Lead Frontend Software Engineer}{Solinftec (solinftec.com)}{
+\cvevent{September 2016 - 2018}{Lead Frontend Software Engineer}{Solinftec (\href{https://solinftec.com/}{solinftec.com})}{
 	{Created the web frontend system to show the user all the information collected from the agriculture field. The system shows maps with the position and status of equipment’s, weather conditions, sends alerts to the user when some parameter is out from the expected range, and offers the possibility to filter the data. Among the main challenges I found was integrating several techs like AngularJs and GoogleMaps, but also, over the time, we did migrate to another technologies like, from Gmpas to Mapbox and from AngularJs to ReactJs.}
 }
 
-\cvevent{September 2014 - 2016}{Fullstack Software Engineer}{Xmovo (xmovo.com)}{
+\cvevent{September 2014 - 2016}{Fullstack Software Engineer}{Xmovo (\href{https://www.linkedin.com/company/xmovo-group-inc/about}{xmovo.com})}{
 	{Worked in the Xmovo team to create the new Xmovo’s training social network web site. It was an ambitious project, it had a feeds section, notifications, chats, selling of training programs, selling of memberships, live video training classes, and other features. Sadly, it was not a successfully project and owners decided to closed it.},
 	{Main Technologies: CSharp, Asp.NET MVC 5, Entity Framework 6, AngularJs, ReactJs, Signal-R, DDD, SOLID principles and many others.}
 }
 
-\cvevent{2010 - 2013}{Freelancer and Previous jobs}{Many companies (Synotech AG, doiTTeam, vWorker, ...)}{
+\cvevent{2010 - 2013}{Freelancer and Previous jobs}{Many companies (\href{https://www.synnotech.de/}{Synotech AG}, doiTTeam, \href{https://www.linkedin.com/company/vworker}{vWorker}, ...)}{
 	{I worked mainly as a freelancer for different companies, most of the time while I was studying at the university.},
 	{Created many WPF applications, and learned the good practices and patterns that were used back then. As an example, MVVM was a key pattern used mostly in WPF and Silverlight.},
 	{With other colleagues we created the doiTTeam to organize our self to do these jobs.},
@@ -403,10 +392,10 @@ Let's collaborate and build amazing software together!\\
 	{But also Computer Since related subjects like programming, compilers, AI, databases, networking, optimizations and a lot more. }
 }
 
-\cvevent{2020 - present}{Licenses and Certifications}{}{
+\cvevent{2020 - present}{Licenses and Certifications}{Udemy, Linkedin, HackerRank}{
 	{Docker Mastery: with Kubernetes +Swarm from a Docker Captain (\href{https://ude.my/UC-1cd13819-15b9-497f-b64a-bdcf46a5486b}{Udemy})},
-	{Software Architecture Foundations (\href{https://www.linkedin.com/learning/certificates/bd4c1327e9f788cc7965dcded5641e21e2fbc9855374203a2f84ad7bb7910fab}{LinkedIn})},
-	{Software Architecture: Domain-Driven Design (\href{https://www.linkedin.com/learning/certificates/e337a7bc24c5ab4bb34600bed69510b387601cc8c75df9f43c73bde385a4ef67}{LinkedIn})},
+	{Software Architecture Foundations (\href{https://www.linkedin.com/learning/certificates/bd4c1327e9f788cc7965dcded5641e21e2fbc9855374203a2f84ad7bb7910fab}{Linkedin})},
+	{Software Architecture: Domain-Driven Design (\href{https://www.linkedin.com/learning/certificates/e337a7bc24c5ab4bb34600bed69510b387601cc8c75df9f43c73bde385a4ef67}{Linkedin})},
 	{Microservices Architecture and Implementation on .NET 5 Course (\href{https://ude.my/UC-1a9390d9-ffee-4789-9c27-6bdbb35fa1f5}{Udemy})},
 	{Problem Solving (Intermediate) Certificate (\href{https://www.hackerrank.com/certificates/5b4c0d75cbc9}{HackerRank})}
 }
@@ -421,17 +410,37 @@ Let's collaborate and build amazing software together!\\
 	{A NPM package, that we can install globally as a command for your terminal, works on linux, windows or mac. What it does is to generate a text directory tree, as the tree command. The improvements it has is that we can customize the output by filtering and limiting the depth level of the tree, and also we can choose between several char-sets (utf8, ascii, or utf8 with icons). It is automatically deployed to NPM by using Github pipelines.}
 }
 
+\cvevent{}{Tree Extended VsCode Plugin}{\href{https://github.com/rulyotano/tree-extended-vscode}{rulyotano/tree-extended-vscode}}{
+	{A VsCode plugin that uses the tree-extended library to generate the directories tree inside the VsCode, which it makes easier to use and accessible to everybody. It is automatically deployed to the marketplace by using Github pipelines.}
+}
 
-%--------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
-%--------------------------------------------------------------------------------------------------
+\cvevent{}{Rulyotano.Crosscuting}{\href{https://github.com/rulyotano/Rulyotano.CrossCutting}{Rulyotano.CrossCutting}, \href{https://github.com/rulyotano/rulyotano.crosscutting.js}{rulyotano.crosscutting.js}}{
+	{These are crosscutting libraries that I've implemented my self, as I have time to do it. Both generates automatically Nuget packages and NPM packages for dotnet and javascript. Here we can find things like common algorithms and data structures. The most interesting one, in my opinion, is the \href{https://rulyotano.com/demos/bezier}{interpolation tool}, implemented for both, dotnet and js. We can get a Bezier curve that passes through a set of points previously defined. Also, there is a \href{https://github.com/rulyotano/wpf-bezier-interpolation}{WPF sample application}.}
+}
 
-\null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{www.rulyotano.com} $\cdot$ \textcolor{sectcol}{github.com/rulyotano}}}}
+\cvevent{}{minesweeper}{\href{https://github.com/rulyotano/minesweeper}{rulyotano/minesweeper}, \href{https://minesweeper.rulyotano.com}{minesweeper.rulyotano.com}}{
+	{A project I've been working lately in my free time. I started it just as an example of how to create a minesweeper game by using ReactJs and Redux pattern. But then, I wanted to test a couple of architectural stuff just learned and wanted to create a fully-working application. So I dockerized the application and created a couple of more services, redis database and traefik reverse proxy and deployed to docker swarm hosted on a very cheap vps. Currently I actually played with it and keep adding new features.}
+}
 
+\cvevent{}{minehttpd-spa}{\href{https://github.com/rulyotano/httpd-spa}{rulyotano/httpd-spa}}{
+	{This is a simple one, but it can be useful to others. It is a docker image that is already configured to work as an apache server to service single-page-applications. The main problem here is that generally SPAs manage the routing internally, and by default the httpd image try to find other resources when the app reload in sub-routes.}
+}
 
+\cvevent{}{cv}{\href{https://github.com/rulyotano/cv}{rulyotano/cv}}{
+	{This Latex CV, it can be used and adapted to other templates. Currently it is a work in progress.}
+}
 
+\cvevent{}{mui-profile}{\href{https://github.com/rulyotano/mui-profile}{rulyotano/mui-profile}}{
+	{My profile website. It is hosted by using github pages.}
+}
+
+\cvevent{}{Coding interview preparation checklist}{\href{https://github.com/rulyotano/coding-interview-preparation-checklist}{rulyotano/coding-interview-preparation-checklist}}{
+	{Useful information to prepare yourself to coding interviews.}
+}
+
+\cvevent{}{Check other repos}{\href{https://github.com/rulyotano?tab=repositories}{rulyotano/repositories}}{
+	{Feel free to dig into my repos, maybe you can find something else interesting there!}
+}
 
 %============================================================================%
 %
