@@ -1,0 +1,38 @@
+name: Create Pdf
+on:
+  workflow_dispatch:
+    inputs:
+      template-name:
+        required: true
+        type: choice
+        options:
+          - Raul-Otano.en
+
+jobs:
+  build-push-image:
+    name: Build and push image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Build Pdf
+        run: |
+          docker container create -e EMAIL=${{ secrets.EMAIL }} -e PHONE=${{ secrets.PHONE }} -it --name cv rulyotano/latex-builder:6518038010 './${{ inputs.template-name }}.tex'
+          docker cp ./templates/${{ inputs.template-name }}.tex cv:/var/build/${{ inputs.template-name }}.tex
+          docker container start -a cv
+          mkdir out
+          docker cp cv:/var/build/${{ inputs.template-name }}.pdf ./out/
+          docker container rm cv
+      - name: Push to private repo
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+            API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+            source-directory: 'out'
+            destination-github-username: 'rulyotano'
+            destination-repository-name: 'cv-private'
+            user-email: rulyotano@gmail.com
+            commit-message: Update file '${{ inputs.template-name }}.pdf'. Id ${{ github.run_id }}
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
