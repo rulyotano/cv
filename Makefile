@@ -1,4 +1,4 @@
-buildpdf = docker container create -it --name cv rulyotano/latex-builder:6518038010 './$(templateFileName).tex' && \
+buildpdf = docker container create -it --name cv cv './$(templateFileName).tex' && \
 						docker cp ./templates/$(templateFileName).tex cv:/var/build/$(templateFileName).tex && \
 						docker container start -a cv && \
 						docker cp cv:/var/build/$(templateFileName).pdf . && \
