@@ -30,7 +30,7 @@ jobs:
             API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
             source-directory: 'out'
-            target-branch: main
+            target-branch: ${{ inputs.template-name }}
             destination-github-username: 'rulyotano'
             destination-repository-name: 'cv-private'
             user-email: rulyotano@gmail.com
