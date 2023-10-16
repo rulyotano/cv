@@ -22,5 +22,5 @@ Also, I need to give some credits to [Ale Dominguez](https://github.com/adborrot
 
 By doing these steps, you should be able to generate yours pdfs without even cloning the repo to your pc. 
 
-## Same image
+## Sample image
 ![CV](images/cv.png)
