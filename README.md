@@ -18,7 +18,7 @@ Also, I need to give some credits to [Ale Dominguez](https://github.com/adborrot
 2. Create your private repository. I've named my one `cv-private`. Note: Need to create a branch per pdf file. I also saved my secret config here.
 3. Add your latex files in the templates directory. Define "secrets" or info you don't want to be public using `<<myemail>>` for instance.
 4. Configure your repository action secrets (Settings > Secrets and variables > Actions). Need to define: `API_TOKEN_GITHUB` (github token to push to the private private ...pending reference about how to do it...) and `SECRETS` (format: `secret1=value1;secret2=value2;...;secretn=valuen`).
-5. Update the `create-pdf.yml` action. Need to your templates to the options (line 8). Need to configure your github user, github private repo and github email in lines from 34-36.
+5. Update the `create-pdf.yml` action. Need to your templates to the options (line 8, options are the template file names without the .tex extension. Note that a branch with the same name should exist in the private repo). Need to configure your github user, github private repo and github email in lines from 34-36.
 
 By doing these steps, you should be able to generate yours pdfs without even cloning the repo to your pc. 
 
