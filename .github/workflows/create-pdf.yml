@@ -7,6 +7,7 @@ on:
         type: choice
         options:
           - Raul-Otano.en
+          - Rachel-bolufe.es
 
 jobs:
   build-push-image:
