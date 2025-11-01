@@ -353,8 +353,9 @@ I would like to collaborate and create outstanding software with you!\\
 \cvsection{Experience}
 
 \cvevent{May 2025 - present}{Senior Software Engineer}{Payoneer (\href{https://www.payoneer.com}{payoneer.com})}{
-	{Design and implement new solutions for new requirements or integrations with external service providers},
-    {Update our codebase from legacy to a more standardized architecture. E.g., make services compatible with Docker, stateless, and integration with k8s}
+	{As part of the Money-Movement-In team, main challenges were to integrate with new external banks allowing accounts creations and in-payments processing.},
+	{Async services communication is key to ensure the best performance, reliability, and scalability of the system.},
+  {Update our codebase from legacy to a more standardized architecture. E.g., make services compatible with Docker, stateless, and integration with k8s.}
 }
 
 \cvevent{March 2021 - May 2025}{Software Engineer II (Backed .NET)}{Docplanner (\href{https://www.docplanner.com/about-us}{docplanner.com})}{
@@ -402,11 +403,40 @@ I would like to collaborate and create outstanding software with you!\\
 }
 
 \cvevent{2020 - present}{Licenses and Certifications}{Udemy, Linkedin, HackerRank}{
+	{Fundamentals of Database Engineering (\href{https://www.udemy.com/certificate/UC-52c19127-263f-4063-b875-480e31e7462a/}{Udemy})},
+	{Go: The Complete Developer's Guide (Golang) (\href{https://www.udemy.com/certificate/UC-baced54d-fd43-43c6-b17d-ac9127bf4633/}{Udemy})},
+	{Kubernetes Mastery: Hands-On Lessons From A Docker Captain (\href{https://www.udemy.com/certificate/UC-c02a2ae9-03d2-40ec-94f3-4a1ff77cf973/}{Udemy})},
 	{Docker Mastery: with Kubernetes +Swarm from a Docker Captain (\href{https://ude.my/UC-1cd13819-15b9-497f-b64a-bdcf46a5486b}{Udemy})},
 	{Software Architecture Foundations (\href{https://www.linkedin.com/learning/certificates/bd4c1327e9f788cc7965dcded5641e21e2fbc9855374203a2f84ad7bb7910fab}{Linkedin})},
 	{Software Architecture: Domain-Driven Design (\href{https://www.linkedin.com/learning/certificates/e337a7bc24c5ab4bb34600bed69510b387601cc8c75df9f43c73bde385a4ef67}{Linkedin})},
 	{Microservices Architecture and Implementation on .NET 5 Course (\href{https://ude.my/UC-1a9390d9-ffee-4789-9c27-6bdbb35fa1f5}{Udemy})},
 	{Problem Solving (Intermediate) Certificate (\href{https://www.hackerrank.com/certificates/5b4c0d75cbc9}{HackerRank})}
+}
+
+
+%---------------------------------------------------------------------------------------
+%	ARTICLES SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Articles}
+
+\cvevent{}{Building a Distributed Sequence Generator with ZooKeeper and C\#}{\href{https://blog.rulyotano.com/articles/zookeeper/}{link}}{
+	{Even if it seems simple, assigning numbers to nodes is not straightforward in the context of distributed systems and automatic scaling applications. I've implemented a very simple example of how to do it using the Zookeeper library, and in this particular case, I've created the nodes using dotnet.}
+}
+
+\cvevent{}{Improving latency by 20x times!}{\href{https://blog.rulyotano.com/blog/article/improve-service-latency/}{link}}{
+	{I wanted to share my experience improving our service latency and the steps I've taken to achieve it. As a result, the P75 Latency went down from more than 100 milliseconds to less than 6! We removed the joins from the SQL queries so we could create one specific cache to fit our needs.}
+}
+
+\cvevent{}{Tree-Extended, a tool to get custom directories trees}{\href{https://blog.rulyotano.com/blog/article/tree-extended-tool}{link}}{
+	{I wanted to show two ways to create custom directory trees by using the tree-extended tool, which I've created based on missing features in the original tree command.}
+}
+
+\cvevent{}{Build Your Personal Website for Free Using React.js}{\href{https://blog.rulyotano.com/blog/article/build-your-personal-website-free-reactjs}{link}}{
+	{I wanted to explain how I've built my personal website for free by using React.js and hosting it on GitHub Pages. So it can be easily replicated!}
+}
+
+\cvevent{}{Interpolate 2D Points Using Bezier Curves in WPF (and JavasScript)}{\href{https://blog.rulyotano.com/blog/article/wpf-bezier-interpolation}{link}}{
+	{Describe an algorithm to get Bezier curves from a set of points. This curve will pass through all the points and will have a smooth factor. In the case of the article, this is implemented in WPF, but also I've updated the article with some implementations made in JavaScript, which can be used in Web or Mobile apps based on JavaScript.}
 }
 
 
@@ -437,26 +467,6 @@ I would like to collaborate and create outstanding software with you!\\
 	{This project provides a straightforward yet highly useful Docker image configuration. It's pre-configured to function as an Apache server specialized in serving single-page applications (SPAs). The specific challenge this image addresses is common in the context of SPAs: when SPAs manage routing internally, and the app is reloaded in sub-routes, the default httpd image attempts to locate other resources.},
         {Purpose: The image's purpose is to simplify the deployment of SPAs and ensure smooth routing, regardless of the internal management of routes within the SPA.},
 	{Ease of Use: By using this Docker image, developers can quickly set up an Apache server configured to serve SPAs without the complications of managing route-related issues}
-}
-
-\cvevent{}{Cv}{\href{https://github.com/rulyotano/cv}{rulyotano/cv}}{
-	{This open-source project offers a LaTeX-based CV template that is designed for professional use. The template is intended to serve as a foundation that can be adapted to various other LaTeX templates, making it highly versatile for individuals in need of a well-structured and customizable CV.},
-        {Current State: The project is a continuous work in progress, reflecting the evolving needs of users and the incorporation of new design elements and features to enhance the template's usability.},
-	{Versatility: The LaTeX CV template project aims to provide a flexible and adaptable solution for individuals looking to create a visually appealing and professionally formatted CV.}
-}
-
-\cvevent{}{Mui-profile}{\href{https://github.com/rulyotano/mui-profile}{rulyotano/mui-profile}}{
-	{My personal profile website is built using React.js and Nuxt.js, showcasing a dynamic and interactive representation of my professional identity. Hosted on GitHub Pages, it provides a platform for sharing my skills, projects, and achievements, offering a comprehensive overview of my capabilities and experiences.},
-        {This project is designed to be versatile and adaptable, making it a valuable resource for anyone looking to create their own profile website. The website's codebase can be reused and customized for various purposes.},
-	{I have authored \href{https://betterprogramming.pub/get-your-personal-website-for-free-create-it-with-reactjs-b7e3c3c874b4}{an informative article} detailing the development and setup of this website, which serves as a helpful guide for others interested in creating their own online profile.}
-}
-
-\cvevent{}{Coding interview preparation checklist}{\href{https://github.com/rulyotano/coding-interview-preparation-checklist}{rulyotano/coding-interview-preparation-checklist}}{
-	{The "Coding Interview Preparation Checklist" is an open-source project primarily comprising a curated collection of references to valuable materials and resources for coding interview preparation. It serves as a comprehensive guide that directs individuals to a wide range of topics, strategies, and techniques essential for excelling in technical interviews.}
-}
-
-\cvevent{}{Other Repositories}{\href{https://github.com/rulyotano?tab=repositories}{rulyotano/repositories}}{
-	{My GitHub profile offers a diverse collection of open-source projects and repositories, covering a wide range of topics and technologies. You are welcome to explore my repositories to discover various interesting projects, code samples, and contributions.}
 }
 
 %============================================================================%
